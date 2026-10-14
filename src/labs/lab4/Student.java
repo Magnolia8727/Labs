@@ -9,13 +9,13 @@ public class Student {
 
 
 
-    public Student(double mark, String studentNumber, String name) {
+    public Student(String name, String studentNumber, double mark) {
         this.mark = mark;
         this.studentNumber = studentNumber;
         this.name = name;
     }
 
-    void displayDetails()
+    public void displayDetails()
     {
         System.out.println("Name: " + name);
         System.out.println("Student Number: " + studentNumber);
@@ -46,12 +46,18 @@ public class Student {
         this.name = name;
     }
 
-    boolean hasPassed ()
+    public boolean hasPassed ()
     {
         if (mark > 50)
             return true;
         else
             return false;
 
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Name: " + name + ", Student Number: " + studentNumber + ", Mark: " + mark;
     }
 }

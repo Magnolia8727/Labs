@@ -66,6 +66,11 @@ public class BankAccount {
 
     }
 
+    @Override
+    public String toString(){
+        return "Account Holder " + accountHolder + ", \nAccount Number " + accountNumber + ", \nBalance " + balance;
+    }
+
 
 
 
