@@ -1,7 +1,10 @@
 import labs.lab4.BankAccount;
+import labs.lab4.Rectangle;
 import labs.lab4.Student;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class mainClass {
@@ -10,7 +13,7 @@ public class mainClass {
 
       Scanner sc = new Scanner(System.in);
 
-      int option = Integer.parseInt( JOptionPane.showInputDialog( "Wanna work with Student = 1 or Bank Account = 2"));
+      int option = Integer.parseInt( JOptionPane.showInputDialog( "Wanna work with Student = 1 or Bank Account = 2 or Rectangle = 3 or 0 to Exit"));
 
 
       if (option == 1) {
@@ -22,13 +25,13 @@ public class mainClass {
 
           Student st = new Student(name, studentNumber, mark);
 
-          System.out.println("Welcome");
-          st.displayDetails();
+          JOptionPane.showMessageDialog(null, "Student created\n" + st.toString());
+
 
           if (st.hasPassed()) {
-              JOptionPane.showMessageDialog(null, "Student not moron ");
+              JOptionPane.showMessageDialog(null, "You got " + st.getMark() + " hence ur not a moron");
           } else {
-              JOptionPane.showMessageDialog(null, "Student moron");
+              JOptionPane.showMessageDialog(null, "You got " + st.getMark() + " hence ur a moron");
 
 
           }
@@ -46,7 +49,7 @@ public class mainClass {
 
           st.setMark(newMark);
 
-          JOptionPane.showMessageDialog(null, "Here are ur details Moron: \n" + st.toString());
+          JOptionPane.showMessageDialog(null, "Here are ur details : \n" + st.toString());
 
       }
       else if (option == 2) {
@@ -61,9 +64,41 @@ public class mainClass {
           JOptionPane.showMessageDialog(null, "Bank Account created successfully\nWelcome\n" + bk.toString());
 
       }
-      else {
+      else if (option == 3)
+      {
+          JOptionPane.showMessageDialog(null, "Rectangle it is");
+
+          double height  = Double.parseDouble(JOptionPane.showInputDialog("Enter height  of a Rectangle: "));
+          double width = Double.parseDouble(JOptionPane.showInputDialog("Enter width of a Rectangle: "));
+
+          Rectangle rect = new Rectangle(width,height);
+
+          JOptionPane.showMessageDialog(null, "Rectangle created\n" + rect.toString());
+
+          JOptionPane.showMessageDialog(null, "Area of Rectangle is : " + rect.calculateArea());
+
+          JOptionPane.showMessageDialog(null, "Parameter of Rectangle is : " + rect.calculatePerimeter());
+
+      }
+      else if (option == 0)
+      {
+
+          JOptionPane.showMessageDialog(null, "Exiting Program");
+          System.exit(0);
+      }
+      else
+      {
           JOptionPane.showMessageDialog(null, "Please enter a valid option");
       }
+
+
+
+
+
+
+
+
+
 
     }
 

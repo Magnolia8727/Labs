@@ -11,6 +11,9 @@ public class Rectangle {
     }
 
     public Rectangle() {
+
+        this.width = 0;
+        this.height = 0;
     }
 
     public double getHeight() {
@@ -29,11 +32,16 @@ public class Rectangle {
         this.width = width;
     }
 
-    double calculateArea() {
+    public double calculateArea() {
         return width * height;
     }
 
-    double calculatePerimeter() {
+    public double calculatePerimeter() {
         return 2 * (width + height);
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" + "width=" + width + ", height=" + height + '}';
     }
 }

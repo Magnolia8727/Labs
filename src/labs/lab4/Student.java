@@ -7,7 +7,12 @@ public class Student {
     private double mark;
 
 
+    public Student() {
 
+        this.mark = 0;
+        this.studentNumber = "";
+        this.name = "";
+    }
 
     public Student(String name, String studentNumber, double mark) {
         this.mark = mark;

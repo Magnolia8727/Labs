@@ -7,12 +7,22 @@ import java.util.Scanner;
 public class Lab3 {
 
 
-   private int arrayStatistics[] = {1, 2, 3, 4, 5, 6};
+   private static int arrayStatistics[] = {1, 2, 3, 4, 5, 6};
+
+
+    static void main(String[] args) {
+
+        storeStudents();
+        highAndLow();
+        searchArray();
+        separate();
+        reverse();
+
+    }
 
 
 
-
-    void storeStudents ()
+   static void storeStudents ()
     {
 
         int studentMArks[] = {23, 25, 30, 23, 29};
@@ -27,7 +37,7 @@ public class Lab3 {
 
     }
 
-    void highAndLow ()
+   static void highAndLow ()
     {
 
 
@@ -41,10 +51,10 @@ public class Lab3 {
 
             if (arrayStatistic <= small) {
                 small = arrayStatistic;
-
             }
 
             if (arrayStatistic >= large) {
+
                 large = arrayStatistic;
             }
 
@@ -55,7 +65,7 @@ public class Lab3 {
 
     }
 
-    void searchArray ()
+    static void searchArray ()
     {
 
         System.out.println("Enter a number: ");
@@ -72,7 +82,7 @@ public class Lab3 {
 
     }
 
-    void separate ()
+   static void separate ()
     {
 
         int evenOddArray[] = arrayStatistics;
@@ -95,7 +105,7 @@ public class Lab3 {
 
     }
 
-    void reverse ()
+   static void reverse ()
     {
         int sort[] = new int[6];
 

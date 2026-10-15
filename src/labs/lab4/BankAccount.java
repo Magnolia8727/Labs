@@ -7,7 +7,13 @@ public class BankAccount {
     private double balance;
 
 
-    public BankAccount (){}
+    public BankAccount (){
+
+        this.accountNumber = "";
+        this.balance = 0;
+        this.accountHolder = "";
+
+    }
 
     public BankAccount(String accountNumber, double balance, String accountHolder) {
         this.accountNumber = accountNumber;
