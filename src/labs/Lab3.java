@@ -1,6 +1,10 @@
 package labs;
 
+import labs.lab4.Rectangle;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 // 3.1
@@ -19,6 +23,8 @@ public class Lab3 {
         reverse();
 
     }
+
+    List St= new ArrayList<Rectangle>();
 
 
 
