@@ -252,6 +252,7 @@ if (first == second) {
 }
 ```
 
+
 ### Exercise 6.2: Array index
 
 Explain the error and correct the loop condition.

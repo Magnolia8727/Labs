@@ -1,0 +1,25 @@
+6.1
+
+It will print different text because a String used
+with == actually compares the address not the actual content,
+and the addresses will not be the same hence it will return different text..
+To Compare Strings we use the equals or maybe compareTo MEthods of the Strings class
+
+6.2
+
+An Array index would must be less than the array length because arrays are 0 indexed and in
+any way the index cant touch the actual length
+then hence if touching the index would result in ArrayOutofBounce error , coz of unwanted index
+
+// AI answer
+
+6.1 It will print different text because using == with Strings compares their memory addresses
+(reference equality) rather than their actual text content. Since the two Strings are stored at
+different locations in memory, == evaluates to false. To compare the actual content of Strings,
+you should use the .equals() method.
+
+6.2 Yes, you explained it well! An array index must always be strictly less than the array's length
+because arrays are 0-indexed (meaning the first element is at index 0 and the last is at length - 1).
+If an index equals or exceeds the length, it points to a memory location outside the array's allocated
+space, resulting in an ArrayIndexOutOfBoundsException..
+
